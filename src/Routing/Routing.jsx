@@ -1,7 +1,9 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom'
-import AuthPage from '../Pages/AuthPage/AuthPage'
+import HomePageLayOut from '../Pages/HomePageLayOut'
+import CourtList from '../Components/Courts/CourtList'
+import HomePage from '../Pages/HomePage'
 
 
 
@@ -9,13 +11,11 @@ const Routing = () => {
     const router = createBrowserRouter([
         {
             path : "/",
-            element : <AuthPage/>,
-            children : [
-                {
-                    
-                }
-            ]
-           
+            element : <HomePageLayOut/>
+        },
+        {
+          path : "/home",
+          element : <HomePage/>
         }
     ])
   return (
